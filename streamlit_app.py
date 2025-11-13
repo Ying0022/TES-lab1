@@ -31,3 +31,13 @@ print("\n")
 df = pd.DataFrame(rng(0).standard_normal((20, 3)), columns=["a", "b", "c"])
 
 st.bar_chart(df)
+
+
+print("\n")
+
+df = pd.DataFrame(
+    rng(0).standard_normal((1000, 2)) / [50, 50] + [37.76, -122.4],
+    columns=["lat", "lon"],
+)
+
+st.map(df)
